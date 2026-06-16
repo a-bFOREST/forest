@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شرطة فورست - لوحة التوجيهات والسياسات</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .main-header {
+            text-align: center;
+            color: #63b3ed;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        h1 { 
+            text-align: center; 
+            color: #4299e1;
+            font-size: 1.5rem;
+            margin-top: 5px;
+            margin-bottom: 5px; 
+        }
+        
+        .subtitle { 
+            text-align: center; 
+            color: #a0aec0; 
+            margin-bottom: 30px; 
+            font-size: 0.95rem; 
+        }
+
+        .section-block {
+            background: linear-gradient(135deg, #1a365d 0%, #2a4365 50%, #2b6cb0 100%);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(43, 108, 176, 0.2);
+            border: 1px solid #4299e1;
+        }
+
+        .section-title {
+            color: #90cdf4;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 8px;
+        }
+
+        .speed-list { list-style: none; padding: 0; margin: 0; }
+        .speed-list li {
+            padding: 10px 15px;
+            background: rgba(0, 0, 0, 0.3);
+            margin-bottom: 8px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid rgba(66, 153, 225, 0.3);
+        }
+        .speed-list li span { font-weight: bold; color: #fc8181; }
+
+        details {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(66, 153, 225, 0.4);
+            border-radius: 6px;
+            margin-bottom: 10px;
+            padding: 12px;
+        }
+        details[open] { 
+            border-color: #63b3ed; 
+            background: rgba(0, 0, 0, 0.4); 
+        }
+        summary { 
+            font-weight: 600; 
+            cursor: pointer; 
+            color: #e2e8f0; 
+            outline: none; 
+        }
+        summary:hover { color: #63b3ed; }
+
+        .content {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #edf2f7;
+            line-height: 1.7;
+            white-space: pre-wrap;
+        }
+
+        .footer-note {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+        }
+
+        .admin-panel {
+            background: #1a202c;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #4a5568;
+            box-shadow: 0 -4px 10px rgba(0,0,0,0.5);
+        }
+        .admin-panel input, .admin-panel button {
+            padding: 8px 15px;
+            border-radius: 6px;
+            border: none;
+            margin: 5px;
+            font-size: 0.95rem;
+        }
+        .admin-panel input { 
+            width: 200px; 
+            text-align: center; 
+            background: #2d3748; 
+            color: #fff;
+            border: 1px solid #4a5568;
+        }
+        .admin-panel button { background: #38a169; color: white; cursor: pointer; font-weight: bold; }
+        .admin-panel button:hover { background: #2f855a; }
+
+        .edit-box {
+            display: none;
+            width: 100%;
+            height: 120px;
+            margin-top: 15px;
+            padding: 10px;
+            border: 1px solid #4299e1;
+            border-radius: 6px;
+            box-sizing: border-box;
+            resize: vertical;
+            background: #1a202c;
+            color: #fff;
+        }
+        .save-btn {
+            display: none;
+            background: #3182ce;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 8px;
+            font-weight: bold;
+        }
+        .save-btn:hover { background: #2b6cb0; }
+    </style>
+</head>
+<body>
+
+    <div class="main-header">🚨 شرطة فورست 🚨</div>
+    <h1>لوحة النظام والتوجيهات العامة</h1>
+    <p class="subtitle">يرجى الالتزام بكافة البنود والتعليمات المدرجة أدناه</p>
+
+    <!-- أولاً -->
+    <div class="section-block">
+        <h2 class="section-title">أولاً: السياسات والممنوعات</h2>
+        <details>
+            <summary>نقطة السياسات</summary>
+            <div class="content">
+                <div class="text-data" id="text-policies">اضغط على زر التعديل في الأسفل لكتابة السياسات هنا...</div>
+                <textarea class="edit-box" id="input-policies"></textarea>
+                <button class="save-btn" onclick="saveText('policies')">تحديث النص</button>
+            </div>
+        </details>
+        <details>
+            <summary>الممنوعات على المستجدين</summary>
+            <div class="content">
+                <div class="text-data" id="text-restrictions">اضغط على زر التعديل في الأسفل لكتابة الممنوعات هنا...</div>
+                <textarea class="edit-box" id="input-restrictions"></textarea>
+                <button class="save-btn" onclick="saveText('restrictions')">تحديث النص</button>
+            </div>
+        </details>
+    </div>
+
+    <!-- ثانياً -->
+    <div class="section-block">
+        <h2 class="section-title">ثانياً: حدود السرعة</h2>
+        <ul class="speed-list">
+            <li>• مرآب الشرطة "طابق صفر" <span>(25)</span></li>
+            <li>• ڤينيس "VENICE" <span>(لا يزيد عن 60)</span></li>
+            <li>• كامبتون "CAMPTON" <span>(بين 80-100)</span></li>
+            <li>• في أماكن أخرى: <span>(لا يزيد عن 100)</span></li>
+            <li>• حد السرعة في المنطقة الخضراء: <span>(40 و لا يتجاوز 60)</span></li>
+        </ul>
+    </div>
+
+    <!-- ثالثاً -->
+    <div class="section-block">
+        <h2 class="section-title">ثالثاً: سلسلة القيادة والرتب</h2>
+        <details>
+            <summary>التسلسل الهرمي</summary>
+            <div class="content">
+                <div class="text-data" id="text-hierarchy">اضغط على زر التعديل في الأسفل لكتابة التسلسل الهرمي...</div>
+                <textarea class="edit-box" id="input-hierarchy"></textarea>
+                <button class="save-btn" onclick="saveText('hierarchy')">تحديث النص</button>
+            </div>
+        </details>
+        <details>
+            <summary>مهام كل رتب الفصيل</summary>
+            <div class="content">
+                <div class="text-data" id="text-tasks">اضغط على زر التعديل في الأسفل لكتابة مهام الرتب...</div>
+                <textarea class="edit-box" id="input-tasks"></textarea>
+                <button class="save-btn" onclick="saveText('tasks')">تحديث النص</button>
+            </div>
+        </details>
+    </div>
+
+    <!-- رابعاً -->
+    <div class="section-block">
+        <h2 class="section-title">رابعاً: نظام الترقيات</h2>
+        <script>
+            for (let i = 0; i <= 8; i++) {
+                document.write(`
+                <details>
+                    <summary>الترقية من رتبة ${i} إلى رتبة ${i+1}</summary>
+                    <div class="content">
+                        <div class="text-data" id="text-rank-${i}-${i+1}">اضغط على زر التعديل لكتابة شروط الترقية من ${i} إلى ${i+1}...</div>
+                        <textarea class="edit-box" id="input-rank-${i}-${i+1}"></textarea>
+                        <button class="save-btn" onclick="saveText('rank-${i}-${i+1}')">تحديث النص</button>
+                    </div>
+                </details>
+                `);
+            }
+        </script>
+    </div>
+
+    <!-- خامساً -->
+    <div class="section-block">
+        <h2 class="section-title">خامساً: طريقة الاعتقال الصحيح</h2>
+        <details>
+            <summary>اعتقال شخص مسلح أو غير مسلح</summary>
+            <div class="content">
+                <div class="text-data" id="text-arrest">اضغط على زر التعديل في الأسفل لكتابة آلية الاعتقال هنا...</div>
+                <textarea class="edit-box" id="input-arrest"></textarea>
+                <button class="save-btn" onclick="saveText('arrest')">تحديث النص</button>
+            </div>
+        </details>
+        <details>
+            <summary>طريقة استخدام التحذير الثالث (60 ثانية)</summary>
+            <div class="content">
+                <div class="text-data" id="text-warning">اضغط على زر التعديل في الأسفل لكتابة تفاصيل التحذير هنا...</div>
+                <textarea class="edit-box" id="input-warning"></textarea>
+                <button class="save-btn" onclick="saveText('warning')">تحديث النص</button>
+            </div>
+        </details>
+    </div>
+
+    <div class="footer-note">هذا النموذج خاص لفصيل شرطة فورست</div>
+
+    <!-- لوحة التحكم في الأسفل تماماً -->
+    <div class="admin-panel">
+        <div id="login-section">
+            <span>لوحة تحكم الإدارة والتعديل للمشرف:</span>
+            <input type="password" id="password-input" placeholder="أدخل كلمة المرور">
+            <button onclick="checkPassword()">تفعيل وضع التعديل</button>
+        </div>
+        <div id="control-section" style="display: none;">
+            <span>وضع التعديل الفوري نشط حالياً 🛠️</span>
+            <button onclick="logout()" style="background: #e53e3e; color: white;">حفظ وإنهاء الوضع</button>
+        </div>
+    </div>
+
+<script>
+    const ADMIN_PASSWORD = "1221"; 
+
+    function checkPassword() {
+        const passwordInput = document.getElementById('password-input').value;
+        if(passwordInput === ADMIN_PASSWORD) {
+            document.getElementById('login-section').style.display = 'none';
+            document.getElementById('control-section').style.display = 'block';
+            
+            document.querySelectorAll('.edit-box').forEach(box => {
+                box.style.display = 'block';
+                let textId = box.id.replace('input-', 'text-');
+                box.value = document.getElementById(textId).innerText.includes("اضغط على زر التعديل") ? "" : document.getElementById(textId).innerText;
+            });
+            document.querySelectorAll('.save-btn').forEach(btn => btn.style.display = 'inline-block');
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        } else {
+            alert('عذراً، كلمة المرور غير صحيحة!');
+        }
+    }
+
+    function saveText(id) {
+        const newValue = document.getElementById(`input-${id}`).value;
+        if(newValue.trim() === "") { alert("يرجى كتابة نص أولاً!"); return; }
+        document.getElementById(`text-${id}`).innerText = newValue;
+        localStorage.setItem(`saved_content_${id}`, newValue);
+        alert('تم حفظ البيانات بنجاح وثبات!');
+    }
+
+    window.onload = function() {
+        document.querySelectorAll('.text-data').forEach(div => {
+            let id = div.id.replace('text-', '');
+            let savedData = localStorage.getItem(`saved_content_${id}`);
+            if(savedData) div.innerText = savedData;
+        });
+    }
+
+    function logout() { location.reload(); }
+</script>
+
+</body>
+</html>
