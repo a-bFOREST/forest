@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شرطة فورست - لوحة النظام والتوجيهات</title>
+    <style>
+        /* إعدادات الخلفية الملكية الموحدة */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: radial-gradient(circle at 50% 50%, #110d04 0%, #000000 100%);
+            background-image: 
+                radial-gradient(circle at 50% 50%, #110d04 0%, #000000 100%),
+                radial-gradient(rgba(212, 175, 55, 0.25) 1.5px, transparent 1.5px),
+                radial-gradient(rgba(212, 175, 55, 0.1) 2px, transparent 2px);
+            background-size: 100% 100%, 45px 45px, 65px 65px;
+            background-position: 0 0, 0 0, 25px 25px;
+            color: #ffffff; 
+            max-width: 800px; 
+            margin: 30px auto; 
+            padding: 20px; 
+        }
+
+        .main-header { text-align: center; color: #d4af37; font-size: 1.8rem; font-weight: bold; margin-bottom: 25px; text-shadow: 0 0 10px rgba(212,175,55,0.3); }
+        
+        .section-block { 
+            background: linear-gradient(135deg, #1a1405 0%, #0d0d0d 100%); 
+            border-radius: 12px; 
+            padding: 20px; 
+            margin-bottom: 25px; 
+            border: 1px solid rgba(212, 175, 55, 0.4); 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .section-title { color: #d4af37; margin-bottom: 15px; font-size: 1.3rem; border-bottom: 2px solid rgba(212, 175, 55, 0.3); padding-bottom: 8px; }
+        
+        details { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 6px; margin-bottom: 10px; padding: 12px; }
+        summary { font-weight: 600; cursor: pointer; color: #e2e8f0; }
+        
+        ul { list-style: none; padding: 0; margin: 10px 0; }
+        ul li { margin-bottom: 8px; padding-right: 15px; position: relative; }
+        ul li::before { content: "•"; color: #d4af37; font-weight: bold; position: absolute; right: 0; }
+        
+        .speed-list li { display: flex; justify-content: space-between; background: rgba(0,0,0,0.3); padding: 10px; border-radius: 6px; margin-bottom: 5px; }
+        .speed-list li span { color: #d4af37; font-weight: bold; }
+        
+        .alert-item { color: #d4af37; font-weight: bold; }
+        
+        /* صناديق التحذير الجديدة بتناغم ذهبي */
+        .warning-box { background: rgba(212, 175, 55, 0.15); border: 1px solid #d4af37; border-radius: 8px; padding: 15px; margin-top: 15px; color: #ffffff; font-weight: bold; text-align: center; }
+        .warning-box-red { background: rgba(212, 175, 55, 0.15); border: 1px solid #d4af37; border-radius: 8px; padding: 15px; margin-top: 15px; color: #ffffff; font-weight: bold; text-align: right; line-height: 1.6; }
+        
+        .footer-note { text-align: center; color: #a0aec0; margin-top: 40px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="main-header">🚨 شرطة فورست 🚨</div>
+
+    <!-- أولاً: السياسات والممنوعات -->
+    <div class="section-block">
+        <h2 class="section-title">أولاً: السياسات والممنوعات</h2>
+        <details>
+            <summary>قوانين وضوابط الفصيل العامة</summary>
+            <ul>
+                <li>يرجى اتباع قوانين الشرطة المعتمدة في الفصيل بشكل كامل لتجنب العقوبات.</li>
+            </ul>
+        </details>
+    </div>
+
+    <!-- ثانياً: حدود السرعة -->
+    <div class="section-block">
+        <h2 class="section-title">ثانياً: حدود السرعة المسموحة</h2>
+        <ul class="speed-list">
+            <li>• مرآب الشرطة "طابق صفر" <span>(25)</span></li>
+            <li>• ڤينيس "VENICE" <span>(60)</span></li>
+            <li>• كامبتون "CAMPTON" <span>(80-100)</span></li>
+            <li>• المنطقة الخضراء <span>(40-60)</span></li>
+        </ul>
+    </div>
+
+    <!-- ثالثاً: متطلبات الترقيات -->
+    <div class="section-block">
+        <h2 class="section-title">ثالثاً: متطلبات الترقيات (من رتبة 0 إلى 9)</h2>
+        
+        <details><summary>من رتبة 0 إلى رتبة 1</summary>
+            <ul>
+                <li>جمع ميداليات الرتبة.</li>
+                <li>الانضمام إلى شات الشرطة الرسمي.</li>
+                <li>حضور 1 فعالية.</li>
+            </ul>
+        </details>
+
+        <details><summary>من رتبة 1 إلى رتبة 2</summary>
+            <ul>
+                <li>جمع ميداليات الرتبة.</li>
+                <li>اجتياز اختبار المايكرو.</li>
+                <li>الحصول على موافقة الاعتقال.</li>
+                <li class="alert-item"># غير مسموح بالأعتقال غير في رتبة 2 في ما اعلي.</li>
+                <li>حضور 1 فعالية.</li>
+            </ul>
+        </details>
+
+        <details><summary>من رتبة 2 إلى رتبة 3</summary>
+            <ul>
+                <li>جمع ميداليات الرتبة.</li>
+                <li>حضور 1 فعالية.</li>
+            </ul>
+        </details>
+
+        <details><summary>من رتبة 3 إلى رتبة 4</summary>
+            <ul>
+                <li>جمع ميداليات الرتبة.</li>
+                <li>حضور 1 فعالية.</li>
+            </ul>
+        </details>
+
+        <details><summary>من رتبة 4 إلى رتبة 5</summary>
+            <ul>
+                <li>جمع ميداليات الرتبة.</li>
+                <li>الانضمام الي فرقة SWAT.</li>
+                <li>اعتقال 10 لاعبين.</li>
+                <li>حضور 5 دوريات شرطة.</li>
+                <li>اعتقال 5 (مهمة المطلوب او غيره).</li>
+                <li class="alert-item"># يجب عمل المهام أثناء تواجدك في رتبة 4.</li>
+            </ul>
+        </details>
+
+        <details><summary>من رتبة 5 إلى 6</summary>
+            <ul>
+                <li>جمع ميداليات الرتبة.</li>
+                <li>يجب ان تكون مازلت عضوًا في فرقة SWAT.</li>
+                <li>الانضمام إلى فرقة مرشدي الشرطة (PD Guide).</li>
+                <li>حضور 20 دوريات.</li>
+                <li>اعتقال 15 أشخاص.</li>
+                <li>حضور 5 تدريبات على الأقل.</li>
+                <li>اعتقال 5 من المطلوبين (اخذ مهمة المطلوب).</li>
+                <li>حضور 1 فعالية.</li>
+                <li>يجب عمل المهام أثناء تواجدك في رتبة 5.</li>
+            </ul>
+        </details>
+
+        <details><summary>من رتبة 6 إلى رتبة 7</summary>
+            <ul>
+                <li>جمع ميداليات الرتبة.</li>
+                <li>يجب ان تكون مازلت عضوًا فرقة SWAT وPD Guide.</li>
+                <li>حضور 20 دورية.</li>
+                <li>اعتقال 20 شخص.</li>
+                <li>ارشاد 10 أعضاء جدد.</li>
+                <li>حضور 8 التدريبات.</li>
+                <li>اعتقال 10 من المطلوبين (اخذ مهمة المطلوب).</li>
+                <li>حضور 1 فعالية.</li>
+                <li>تقديم تقرير أسبوعي واحد علي الاقل موضحًا فيه قيامك بالمهام الاسبوعية.</li>
+                <li class="alert-item"># يجب عمل المهام أثناء تواجدك في رتبة 6.</li>
+            </ul>
+        </details>
+
+        <details><summary>من رتبة 7 إلى رتبه 8</summary>
+            <ul>
+                <li>جمع ميداليات الرتبة.</li>
+                <li>الاستمرار في فرق SWAT وPD Guide.</li>
+                <li>الانضمام إلى فرقة SF (القوات الخاصة).</li>
+                <li>حضور 25 دورية.</li>
+                <li>اعتقال 25 شخص.</li>
+                <li>ارشاد 10 أعضاء جدد.</li>
+                <li>حضور 10 تدريبات (SF).</li>
+                <li>اعتقال 10 من المطلوبين (اخذ مهمة المطلوب).</li>
+                <li>حضور 1 فعالية.</li>
+                <li>تقديم تقرير أسبوعي واحد علي الاقل موضحًا فيه قيامك بالمهام الاسبوعية.</li>
+                <li class="alert-item"># يجب عمل المهام أثناء تواجدك في رتبة 7.</li>
+            </ul>
+        </details>
+
+        <details><summary>من رتبه 8 إلى رتبة 9</summary>
+            <ul>
+                <li>جمع ميداليات الرتبة.</li>
+                <li>الاستمرار في جميع الفرق (SWAT، PD Guide، SF).</li>
+                <li>حضور 30 دورية.</li>
+                <li>اعتقال 30 شخص.</li>
+                <li>ارشاد 10 أعضاء جدد على الأقل.</li>
+                <li>حضور 12 تدريبات(SF).</li>
+                <li>اعتقال 15 من المطلوبين (اخذ مهمة المطلوب).</li>
+                <li>حضور 1 فعالية.</li>
+                <li>تقديم تقريران أسبوعي علي الاقل موضحًا فيه قيامك بالمهام الاسبوعية.</li>
+                <li class="alert-item"># يجب عمل المهام أثناء تواجدك في رتبة 8.</li>
+            </ul>
+        </details>
+        
+        <div class="warning-box-red">
+            📌 ملاحضة:<br>
+            1- يجب التقاط صور اثناء اصطفاف الدورية وبعد انتهائها مع ضرورة ان يكون التاريه والوقت واضحين.<br>
+            2- يجب ان كل المهام المقدمة للحصول على الترقية تكون بالتاريه اثناذ وجودك في الترقيه الحالية ان تم تقديم مهام من قبل الترقية الحالية لن يتم احتسابها.
+        </div>
+    </div>
+
+    <!-- رابعاً: مهام الرتب المحددة والأسبوعية -->
+    <div class="section-block">
+        <h2 class="section-title">رابعاً: مهام الرتب المحددة (6 - 11)</h2>
+        
+        <details><summary>رتبة 6</summary>
+            <ul>
+                <li>حضور 5 دوريات.</li>
+                <li>اعتقال 5 أشخاص.</li>
+                <li>مهمة مطلوب للعدالة 5.</li>
+                <li>مهمة فحص البضائع 5.</li>
+                <li>حضور 2 تدريب.</li>
+                <li>حضور فعالية واحدة.</li>
+            </ul>
+        </details>
+        
+        <details><summary>رتبة 7</summary>
+            <ul>
+                <li>حضور 8 دوريات.</li>
+                <li>مهمة مطلوب للعدالة 5.</li>
+                <li>مهمة فحص البضائع 5.</li>
+                <li>اعتقال 8 أشخاص.</li>
+                <li>حضور 4 تدريبات.</li>
+                <li>حضور فعالية واحدة.</li>
+            </ul>
+        </details>
+        
+        <details><summary>رتبة 8</summary>
+            <ul>
+                <li>حضور 12 دورية.</li>
+                <li>مهمة مطلوب للعدالة 5.</li>
+                <li>مهمة فحص البضائع 5.</li>
+                <li>اعتقال 12 شخص.</li>
+                <li>مساعد قائد دورية 5 مرات.</li>
+                <li class="alert-item"># تنظيم والرد على الراديو.</li>
+                <li>حضور 6 تدريبات.</li>
+                <li>حضور فعالية واحدة.</li>
+            </ul>
+        </details>
+        
+        <details><summary>رتبة 9</summary>
+            <ul>
+                <li>عمل 5 دوريات عامة.</li>
+                <li>عمل 5 دوريات للمستشفى.</li>
+                <li>عمل 8 مقابلات.</li>
+                <li>إعطاء 2 رخصة اعتقال.</li>
+                <li>حضور 2 تدريب.</li>
+                <li>حضور 2 فعالية.</li>
+            </ul>
+        </details>
+        
+        <details><summary>رتبة 10</summary>
+            <ul>
+                <li><strong>مسؤول فرقة SWAT:</strong></li>
+                <li>الإعتناء بالفريقه عناية كاملة.</li>
+                <li>عمل 10 تدريبات كحد ادني اسبوعيًا.</li>
+                <li>عمل 4 مداهمات اسبوعيًا.</li>
+                <li>عمل 10 دوريات على الأقل اسبوعيًا.</li>
+                <li>تقديم التقرير الأسبوعي مع نهاية الخميس.</li>
+                
+                <li style="list-style:none; margin: 15px 0 5px 0;"><strong style="color:#d4af37;">قائد فرقة الفعاليات:</strong></li>
+                <li>الاعتناء بالفرقة عناية كاملة.</li>
+                <li>نشر عدد (3) فيديو الاعلامية عبر المنصات.</li>
+                <li>ابتكار السيناريوات.</li>
+                <li>عمل 5 فعاليات داخلية على الاقل اسبوعيًا.</li>
+                <li>عمل 4 فعاليات مشتركة اسبوعيًا على الأقل.</li>
+                <li>تقديم التقرير الاسبوعي مع نهاية يوم الخميس.</li>
+
+                <li style="list-style:none; margin: 15px 0 5px 0;"><strong style="color:#d4af37;">قائد فرقة FTO والارشاد:</strong></li>
+                <li>الإعتناء بفريقه عناية كاملة.</li>
+                <li>عمل 8 تدريبات اسبوعيًا (مسلح/ غير مسلح).</li>
+                <li>الاشراف على الرتب (0-4).</li>
+                <li>جلسات ارشادية بشكل يومي بعد انتهاء التقديم.</li>
+                <li>جلسات ارشادية يومية قبل موعد الترقيات.</li>
+                <li>تقديم التقرير الأسبوعي مع نهاية يوم الخميس.</li>
+            </ul>
+        </details>
+        
+        <details><summary>رتبة 11</summary>
+            <ul>
+                <li><strong>مسؤول المقابلات:</strong></li>
+                <li>الإعتناء بفريقه عناية كاملة.</li>
+                <li>حضور 10 فعاليات الانضمام للفصيل بنفسه كحد ادني.</li>
+                <li>تقديم التقرير الأسبوعي مع نهاية الخميس.</li>
+                <li class="alert-item"># نظرًا الي وجود مقابلتين في اليوم, يمكن الي مسؤول المقابلات تنظيم فعاليات الانضمام الاخري مع القادة و النواب.</li>
+            </ul>
+        </details>
+
+        <div class="warning-box">
+            ⚠️ في حال عدم إتمام أي من المهام الأسبوعية يتم إصدار تحذير رسمي، على أن يكون "كل تحذيرين" في الرتبة نفسها يتم تخفيض الرتبة مباشرة.
+        </div>
+    </div>
+
+    <div class="footer-note">هذا النموذج خاص لفصيل شرطة فورست</div>
+
+</body>
+</html>
